@@ -18,11 +18,8 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 
 <iframe width="869" height="589" src="https://www.youtube.com/embed/hNtC5qa7hIc?list=PLe-u_DjFx7etvdoxgh04tIDzwMjn92btk" title="Caelus B. Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+My final milestone was to add modifications. I made the whole thing portable, with its own screen and battery. I also slightly increase the qulity of the image. My biggest challenge in this proejct was the code that didn't work from the website, I eventually overcame it by doing research and asking for help. They key topics I learned were overall engineering from the kahoots, and the coding portion of my project. Something I hope to learn in the future after everything i learned here is some more mechanical enginering, this porject was mostly code, so I want to learn about more of the physical things
+
 
 <!--
 
