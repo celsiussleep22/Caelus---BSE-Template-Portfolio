@@ -62,6 +62,8 @@ void loop() {
 }
 ```
 -->
+
+
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
@@ -71,6 +73,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Hosyond Screen | Used for displaying the image | $45.99 | <a href="https://www.amazon.com/dp/B09XKC53NH?lv=shuf&social_share=cm_sw_r_cp_ud_dp_4P1369E4GD7MTFKSAQQV_1&channelId=751&ref_=cm_sw_r_cp_ud_dp_4P1369E4GD7MTFKSAQQV_1&plpRedirect=mhFallback&th=1"> Link </a> |
 | Power Bank | Used to make the whole thing portable by supplying power | $25.99 | <a href="https://www.amazon.com/Anker-Travel-Ready-Technology-High-Speed-Output（Black），1pack/dp/B0D5CLSMFB/ref=sr_1_10?crid=3SV5HEYTS5WJX&dib=eyJ2IjoiMSJ9.bSWFqslAPpD-Wi_zW-SHpTgGirvs3z9FUgRi4c2uf1d5pfIVn_gLcuLDYU_PnXRiaBGBNiU2CRdwqoxXZfZI_uxJaR1N00jGsxCbOuAQ0SNvfFxL6GYX8WLdAy4s4fj2zFsu072WK4YWcf1DvbH9yeLLpCBVlMjGkCDEozAM3ELoJXRwbYmZaGOLr5Hqu0AA91k0jrlK7OQMhrVPCnls8zaiuYfszql313tSVvNE_Hk.ZPep1j_qow8FwLoSuXcn0MneJ99BHGcSlG5kP4vQfIw&dib_tag=se&keywords=5v%2Bpowerbank&qid=1781636747&sprefix=5v%2Bpowerbank%2Caps%2C196&sr=8-10&th=1"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+
+
 <!--
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
