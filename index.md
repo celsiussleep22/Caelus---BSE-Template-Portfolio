@@ -34,6 +34,8 @@ For your second milestone, explain what you've worked on since your previous mil
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
+
+
 -->
 # First Milestone
 
@@ -41,11 +43,11 @@ For your second milestone, explain what you've worked on since your previous mil
 <iframe width="1004" height="565" src="https://www.youtube.com/embed/82A-ptBor8o" title="Caelus B.  Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 -- My project used the raspberry pi connected to a thermal camera. I coded the pi to have a bar to show the colors for each temrpeature and had a display of the image from the camera. Currently, i'm struggling with debugging my code, it doesn't work. My plan is to add a portable screen and battery to it, and give it the ability to take pictures
-<!--
+
 # Schematics 
 <img width="1876" height="1164" alt="image" src="https://github.com/user-attachments/assets/65d84012-0af6-4c50-aee1-c37a5ca6d32e" />
 
-
+<!--
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
