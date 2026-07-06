@@ -43,7 +43,8 @@ For your second milestone, explain what you've worked on since your previous mil
 -- My project used the raspberry pi connected to a thermal camera. I coded the pi to have a bar to show the colors for each temrpeature and had a display of the image from the camera. Currently, i'm struggling with debugging my code, it doesn't work. My plan is to add a portable screen and battery to it, and give it the ability to take pictures
 <!--
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+<img width="1876" height="1164" alt="image" src="https://github.com/user-attachments/assets/65d84012-0af6-4c50-aee1-c37a5ca6d32e" />
+
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
@@ -67,8 +68,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Hosyond Screen | Used for displaying the image | $45.99 | <a href="https://www.amazon.com/dp/B09XKC53NH?lv=shuf&social_share=cm_sw_r_cp_ud_dp_4P1369E4GD7MTFKSAQQV_1&channelId=751&ref_=cm_sw_r_cp_ud_dp_4P1369E4GD7MTFKSAQQV_1&plpRedirect=mhFallback&th=1"> Link </a> |
+| Power Bank | Used to make the whole thing portable by supplying power | $25.99 | <a href="https://www.amazon.com/Anker-Travel-Ready-Technology-High-Speed-Output（Black），1pack/dp/B0D5CLSMFB/ref=sr_1_10?crid=3SV5HEYTS5WJX&dib=eyJ2IjoiMSJ9.bSWFqslAPpD-Wi_zW-SHpTgGirvs3z9FUgRi4c2uf1d5pfIVn_gLcuLDYU_PnXRiaBGBNiU2CRdwqoxXZfZI_uxJaR1N00jGsxCbOuAQ0SNvfFxL6GYX8WLdAy4s4fj2zFsu072WK4YWcf1DvbH9yeLLpCBVlMjGkCDEozAM3ELoJXRwbYmZaGOLr5Hqu0AA91k0jrlK7OQMhrVPCnls8zaiuYfszql313tSVvNE_Hk.ZPep1j_qow8FwLoSuXcn0MneJ99BHGcSlG5kP4vQfIw&dib_tag=se&keywords=5v%2Bpowerbank&qid=1781636747&sprefix=5v%2Bpowerbank%2Caps%2C196&sr=8-10&th=1"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 <!--
 # Other Resources/Examples
