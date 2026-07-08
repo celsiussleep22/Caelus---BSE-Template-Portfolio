@@ -21,22 +21,10 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 My final milestone was to add modifications. I made the whole thing portable, with its own screen and battery. I also slightly increase the qulity of the image. My biggest challenge in this proejct was the code that didn't work from the website, I eventually overcame it by doing research and asking for help. They key topics I learned were overall engineering from the kahoots, and the coding portion of my project. Something I hope to learn in the future after everything i learned here is some more mechanical enginering, this porject was mostly code, so I want to learn about more of the physical things
 
 
-<!--
-
-# Second Milestone
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
 
 
--->
+
+
 # First Milestone
 
 
@@ -45,7 +33,8 @@ For your second milestone, explain what you've worked on since your previous mil
 -- My project used the raspberry pi connected to a thermal camera. I coded the pi to have a bar to show the colors for each temrpeature and had a display of the image from the camera. Currently, i'm struggling with debugging my code, it doesn't work. My plan is to add a portable screen and battery to it, and give it the ability to take pictures
 
 # Schematics 
-<img width="1876" height="1164" alt="image" src="https://github.com/user-attachments/assets/65d84012-0af6-4c50-aee1-c37a5ca6d32e" />
+<img width="664" height="974" alt="image" src="https://github.com/user-attachments/assets/d4045d9d-5cb8-4226-b141-db6909d6406b" />
+
 
 <!--
 # Code
@@ -74,7 +63,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 |:--:|:--:|:--:|:--:|
 | Hosyond Screen | Used for displaying the image | $45.99 | <a href="https://www.amazon.com/dp/B09XKC53NH?lv=shuf&social_share=cm_sw_r_cp_ud_dp_4P1369E4GD7MTFKSAQQV_1&channelId=751&ref_=cm_sw_r_cp_ud_dp_4P1369E4GD7MTFKSAQQV_1&plpRedirect=mhFallback&th=1"> Link </a> |
 | Power Bank | Used to make the whole thing portable by supplying power | $25.99 | <a href="https://www.amazon.com/Anker-Travel-Ready-Technology-High-Speed-Output（Black），1pack/dp/B0D5CLSMFB/ref=sr_1_10?crid=3SV5HEYTS5WJX&dib=eyJ2IjoiMSJ9.bSWFqslAPpD-Wi_zW-SHpTgGirvs3z9FUgRi4c2uf1d5pfIVn_gLcuLDYU_PnXRiaBGBNiU2CRdwqoxXZfZI_uxJaR1N00jGsxCbOuAQ0SNvfFxL6GYX8WLdAy4s4fj2zFsu072WK4YWcf1DvbH9yeLLpCBVlMjGkCDEozAM3ELoJXRwbYmZaGOLr5Hqu0AA91k0jrlK7OQMhrVPCnls8zaiuYfszql313tSVvNE_Hk.ZPep1j_qow8FwLoSuXcn0MneJ99BHGcSlG5kP4vQfIw&dib_tag=se&keywords=5v%2Bpowerbank&qid=1781636747&sprefix=5v%2Bpowerbank%2Caps%2C196&sr=8-10&th=1"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Raspberry Pi 4 | Used to convert the information fromt the camera into an image | $148.99 | <a href="https://www.amazon.com/dp/B0C8LV6VNZ?ref=cm_sw_r_cp_ud_dp_ZSXTKYVG1X4S0JWKJMXB&ref_=cm_sw_r_cp_ud_dp_ZSXTKYVG1X4S0JWKJMXB&social_share=cm_sw_r_cp_ud_dp_ZSXTKYVG1X4S0JWKJMXB&th=1"> Link </a> |
 
 
 <!--
