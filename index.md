@@ -1,5 +1,5 @@
 # Thermal Imaging Camera
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+My project was the thermal imaging camera, it uses the mlx90640 thermal camera to get the information, then uses the pi to convert that information Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
 
 <!--You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions: -->
 
@@ -33,23 +33,159 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 <img width="664" height="974" alt="image" src="https://github.com/user-attachments/assets/d4045d9d-5cb8-4226-b141-db6909d6406b" />
 
 
-<!--
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+```python
+import time
+import board
+import busio
+import numpy as np
+import adafruit_mlx90640
+import cv2
+from collections import deque
 
-void loop() {
-  // put your main code here, to run repeatedly:
+def initialize_sensor():
+    i2c = busio.I2C(board.SCL, board.SDA)
+    mlx = adafruit_mlx90640.MLX90640(i2c)
+    mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_16_HZ
+    return mlx
 
-}
+UPSCALE = 8
+BUFFER_SIZE = 8  # number of frames to blend
+frame_buffer = deque(maxlen=BUFFER_SIZE)
+
+def super_resolve(buffer, scale=UPSCALE):
+    """
+    Average recent frames then upscale — reduces noise and recovers
+    sub-pixel detail that shifts between reads due to sensor noise.
+    """
+    stacked = np.mean(buffer, axis=0)  # temporal average
+    h, w = stacked.shape
+    upscaled = cv2.resize(stacked, (w * scale, h * scale),
+                          interpolation=cv2.INTER_LANCZOS4)  # sharper than cubic
+    # Edge-preserving sharpen pass
+    blurred = cv2.GaussianBlur(upscaled, (0, 0), sigmaX=2)
+    sharpened = cv2.addWeighted(upscaled, 1.8, blurred, -0.8, 0)
+    return sharpened
+
+def normalize_and_colormap(data):
+    mn, mx = np.min(data), np.max(data)
+    norm = ((data - mn) / (mx - mn + 1e-6) * 255).astype(np.uint8)
+    return cv2.applyColorMap(norm, cv2.COLORMAP_INFERNO)
+
+def add_overlay(frame_bgr, data_array, fps):
+    mn, mx = np.min(data_array), np.max(data_array)
+    center = data_array[12, 16]
+    for i, text in enumerate([
+        f'Min: {mn:.1f}C',
+        f'Max: {mx:.1f}C',
+        f'Ctr: {center:.1f}C',
+        f'FPS: {fps:.1f}'
+    ]):
+        cv2.putText(frame_bgr, text, (10, 25 + i * 25),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
+
+def main():
+    mlx = initialize_sensor()
+    frame = np.zeros((24 * 32,))
+    t_array = []
+    cv2.namedWindow('Thermal Camera', cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('Thermal Camera', 640, 480)
+    print("Press 'q' to quit")
+    while True:
+        t1 = time.monotonic()
+        try:
+            mlx.getFrame(frame)
+        except (ValueError, RuntimeError):
+            continue
+        data_array = np.fliplr(np.reshape(frame, (24, 32)))
+        frame_buffer.append(data_array.copy())
+        # Need at least a few frames before super-resolving
+        if len(frame_buffer) < 3:
+            continue
+        resolved = super_resolve(frame_buffer)
+        bgr = normalize_and_colormap(resolved)
+        t_array.append(time.monotonic() - t1)
+        fps = len(t_array) / np.sum(t_array)
+        add_overlay(bgr, data_array, fps)
+        cv2.imshow('Thermal Camera', bgr)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    cv2.destroyAllWindows()
+
+if __name__ == '__main__':
+    main()
 ```
--->
+
+```python
+import time
+import board
+import busio
+import numpy as np
+import adafruit_mlx90640
+import cv2
+
+# --- Sensor setup (unchanged) ---
+i2c = busio.I2C(board.SCL, board.SDA)
+mlx = adafruit_mlx90640.MLX90640(i2c)
+mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_16_HZ  # bumped from 4Hz
+
+# --- Window setup (replaces plt.ion + plt.subplots) ---
+cv2.namedWindow('Thermal Camera', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('Thermal Camera', 640, 520)  # extra height for colorbar
+
+frame = np.zeros((24 * 32,))
+t_array = []
+max_retries = 5
+
+def draw_colorbar(image, min_temp, max_temp):
+    """Draws a colorbar strip at the bottom of the image"""
+    h, w = image.shape[:2]
+    bar_height = 40
+    bar = np.linspace(0, 255, w, dtype=np.uint8).reshape(1, -1)
+    bar = cv2.applyColorMap(np.tile(bar, (bar_height, 1)), cv2.COLORMAP_INFERNO)
+    # Labels
+    cv2.putText(bar, f'{min_temp:.1f}C', (5, 28),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
+    cv2.putText(bar, f'{max_temp:.1f}C', (w - 70, 28),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
+    cv2.putText(bar, 'Temperature [C]', (w//2 - 70, 28),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
+    return np.vstack([image, bar])  # attach below thermal image
+
+print("Press 'q' to quit")
+while True:
+    t1 = time.monotonic()
+    retry_count = 0
+    while retry_count < max_retries:
+        try:
+            mlx.getFrame(frame)
+            data_array = np.fliplr(np.reshape(frame, (24, 32)))
+            # Normalize to 0-255 (replaces set_clim)
+            mn, mx = np.min(data_array), np.max(data_array)
+            norm = ((data_array - mn) / (mx - mn + 1e-6) * 255).astype(np.uint8)
+            # Upscale + colormap (replaces imshow)
+            upscaled = cv2.resize(norm, (640, 480), interpolation=cv2.INTER_CUBIC)
+            colored = cv2.applyColorMap(upscaled, cv2.COLORMAP_INFERNO)
+            # Add colorbar (replaces fig.colorbar)
+            display = draw_colorbar(colored, mn, mx)
+            cv2.imshow('Thermal Camera', display)
+            t_array.append(time.monotonic() - t1)
+            fps = len(t_array) / np.sum(t_array)
+            print(f'Sample Rate: {fps:2.1f}fps')
+            break
+        except ValueError:
+            retry_count += 1
+        except RuntimeError as e:
+            retry_count += 1
+            if retry_count >= max_retries:
+                print(f"Failed after {max_retries} retries with error: {e}")
+                break
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+cv2.destroyAllWindows()
+```
+
 
 
 # Bill of Materials
