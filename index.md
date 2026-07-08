@@ -1,5 +1,7 @@
 # Thermal Imaging Camera
-My project was the thermal imaging camera, it uses the mlx90640 thermal camera to get the information, then uses the pi to convert that information Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+My project was the thermal imaging camera, it uses the mlx90640 thermal camera to get the information, then uses the pi to convert that information. Then that image is projected onto the screen. THere is a bar on the side, which shows the color of the porjected image abnd the tempreature it coreesponds to. The colors don't change, just the tmepreatures, so something much colder could have the same colors but completely different tempreatures. My biggest challenge throughout this project was debugging my code, I didn't have a lot of coding experience, so I had to do a lot of research. Research was a big lesson that I learned from this project, when trying to make the quality of the image better, I didn't do the right reserch and tried to troubleshoot it when it couldn't be improved. I could have avoided all of it if I had just done the proper research at the start. I am very proud to have finished the project, and the whole thing to be working and portable.
+
+
 
 <!--You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions: -->
 
