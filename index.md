@@ -1,4 +1,4 @@
-**# Thermal Imaging Camera
+# Thermal Imaging Camera
 My project was the thermal imaging camera, it uses the mlx90640 thermal camera to get the information, then uses the pi to convert that information. Then that image is projected onto the screen. THere is a bar on the side, which shows the color of the projected image and the temperature it corresponds to. The colors don't change, just the temperatures, so something much colder could have the same colors but completely different temperatures. My biggest challenge throughout this project was debugging my code. I didn't have a lot of coding experience, so I had to do a lot of research. Research was a big lesson that I learned from this project. When trying to make the quality of the image better, I didn't do the right research and tried to troubleshoot it when it couldn't be improved. I could have avoided all of it if I had just done the proper research at the start. I am very proud to have finished the project, and the whole thing to be working and portable.
 
 
