@@ -1,5 +1,5 @@
-# Thermal Imaging Camera
-My project was the thermal imaging camera, it uses the mlx90640 thermal camera to get the information, then uses the pi to convert that information. Then that image is projected onto the screen. THere is a bar on the side, which shows the color of the porjected image abnd the tempreature it coreesponds to. The colors don't change, just the tmepreatures, so something much colder could have the same colors but completely different tempreatures. My biggest challenge throughout this project was debugging my code, I didn't have a lot of coding experience, so I had to do a lot of research. Research was a big lesson that I learned from this project, when trying to make the quality of the image better, I didn't do the right reserch and tried to troubleshoot it when it couldn't be improved. I could have avoided all of it if I had just done the proper research at the start. I am very proud to have finished the project, and the whole thing to be working and portable.
+**# Thermal Imaging Camera
+My project was the thermal imaging camera, it uses the mlx90640 thermal camera to get the information, then uses the pi to convert that information. Then that image is projected onto the screen. THere is a bar on the side, which shows the color of the projected image and the temperature it corresponds to. The colors don't change, just the temperatures, so something much colder could have the same colors but completely different temperatures. My biggest challenge throughout this project was debugging my code. I didn't have a lot of coding experience, so I had to do a lot of research. Research was a big lesson that I learned from this project. When trying to make the quality of the image better, I didn't do the right research and tried to troubleshoot it when it couldn't be improved. I could have avoided all of it if I had just done the proper research at the start. I am very proud to have finished the project, and the whole thing to be working and portable.
 
 
 
@@ -21,7 +21,8 @@ My project was the thermal imaging camera, it uses the mlx90640 thermal camera t
 
 <iframe width="1004" height="565" src="https://www.youtube.com/embed/82A-ptBor8o" title="Caelus B.  Milestone 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
--- My project used the raspberry pi connected to a thermal camera. I coded the pi to have a bar to show the colors for each temrpeature and had a display of the image from the camera. Currently, i'm struggling with debugging my code, it doesn't work. My plan is to add a portable screen and battery to it, and give it the ability to take pictures
+-- My project used the raspberry pi connected to a thermal camera. I coded the pi to have a bar to show the colors for each temperature and had a display of the image from the camera. Currently, i'm struggling with debugging my code, it doesn't work. My plan is to add a portable screen and battery to it, and give it the ability to take pictures
+
 
 
 # Final Milestone
@@ -29,7 +30,7 @@ My project was the thermal imaging camera, it uses the mlx90640 thermal camera t
 
 <iframe width="869" height="589" src="https://www.youtube.com/embed/hNtC5qa7hIc?list=PLe-u_DjFx7etvdoxgh04tIDzwMjn92btk" title="Caelus B. Milestone 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
--- My final milestone was to add modifications. I made the whole thing portable, with its own screen and battery. I also slightly increase the qulity of the image. My biggest challenge in this proejct was the code that didn't work from the website, I eventually overcame it by doing research and asking for help. They key topics I learned were overall engineering from the kahoots, and the coding portion of my project. Something I hope to learn in the future after everything i learned here is some more mechanical enginering, this porject was mostly code, so I want to learn about more of the physical things
+-- My final milestone was to add modifications. I made the whole thing portable, with its own screen and battery. I also slightly increase the quality of the image. My biggest challenge in this project was the code that didn't work from the website, I eventually overcame it by doing research and asking for help. The key topics I learned were overall engineering from the kahoots, and the coding portion of my project. Something I hope to learn in the future after everything i learned here is some more mechanical engineering, this project was mostly code, so I want to learn about more of the physical things
 
 # Schematics 
 <img width="664" height="974" alt="image" src="https://github.com/user-attachments/assets/d4045d9d-5cb8-4226-b141-db6909d6406b" />
@@ -201,3 +202,4 @@ One of the best parts about Github is that you can view how other people set up 
 
 To watch the BSE tutorial on how to create a portfolio, click here.
 -->
+**
